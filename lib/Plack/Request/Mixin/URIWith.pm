@@ -77,6 +77,11 @@ Plack::Request::Mixin::URIWith -
     package My::Request;
     use parent qw/Plack::Request Plack::Request::Mixin::URIWith/;
 
+    package main;
+
+    my $req = My::Request->new($env);
+    $req->uri_with({key => 'val'});
+
 =head1 DESCRIPTION
 
 Plack::Request::Mixin::URIWith is
