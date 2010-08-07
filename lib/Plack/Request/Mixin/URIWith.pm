@@ -70,7 +70,7 @@ __END__
 
 =head1 NAME
 
-Plack::Request::Mixin::URIWith -
+Plack::Request::Mixin::URIWith - $req->uri_with() for Plack::Request.
 
 =head1 SYNOPSIS
 
@@ -84,7 +84,21 @@ Plack::Request::Mixin::URIWith -
 
 =head1 DESCRIPTION
 
-Plack::Request::Mixin::URIWith is
+Plack::Request::Mixin::URIWith is mixin library for Plack::Request.
+
+This mixin provides uri rewriter.
+
+=head2 $req->uri_with( { key => 'value' } );
+
+Returns a rewritten URI object for the current request. Key/value pairs
+passed in will override existing parameters. You can remove an existing
+parameter by passing in an undef value. Unmodified pairs will be
+preserved.
+
+You may also pass an optional second parameter that puts C<uri_with> into
+append mode:
+
+  $req->uri_with( { key => 'value' }, { mode => 'append' } );
 
 =head1 AUTHOR
 
@@ -92,11 +106,19 @@ Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF GMAIL COME<gt>
 
 =head1 SEE ALSO
 
+some part of the code was taken from L<Catalyst>.
+
+=head1 THANKS TO
+
+L<Catalyst> committers.
+
 =head1 LICENSE
 
 Copyright (C) Tokuhiro Matsuno
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
+
+some part of code/document is taken from L<Catalyst>.
 
 =cut
