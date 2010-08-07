@@ -4,7 +4,8 @@ Plack::Request::Mixin::URIWith -
 
 # SYNOPSIS
 
-  use Plack::Request::Mixin::URIWith;
+    package My::Request;
+    use parent qw/Plack::Request Plack::Request::Mixin::URIWith/;
 
 # DESCRIPTION
 
