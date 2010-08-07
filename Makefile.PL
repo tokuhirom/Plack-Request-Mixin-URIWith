@@ -2,7 +2,8 @@ use inc::Module::Install;
 name 'Plack-Request-Mixin-URIWith';
 all_from 'lib/Plack/Request/Mixin/URIWith.pm';
 
-# requires '';
+requires 'Plack';
+requires 'URI::QueryParam';
 
 
 readme_markdown_from 'lib/Plack/Request/Mixin/URIWith.pm';
