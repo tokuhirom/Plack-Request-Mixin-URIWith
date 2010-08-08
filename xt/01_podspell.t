@@ -30,3 +30,7 @@ kazeburo
 daisuke
 maki
 TODO
+URI
+committers
+mixin
+uri
