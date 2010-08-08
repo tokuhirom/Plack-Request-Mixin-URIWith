@@ -4,7 +4,7 @@ use warnings;
 use 5.00800;
 our $VERSION = '0.01';
 use Carp ();
-use URI::QueryParam;
+use URI::QueryParam ();
 
 sub uri_with {
     my( $self, $args, $behavior) = @_;
